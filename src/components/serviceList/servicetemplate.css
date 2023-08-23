@@ -1,0 +1,103 @@
+.common-template {
+  padding: 4rem 4rem;
+  background: var(--color-bg-primary);
+}
+.template-section {
+  width: 80%;
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  margin: auto;
+}
+.template-details {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.template-details > p {
+  color: var(--color-lite);
+  text-align: justify;
+}
+.template-image {
+  max-width: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.template-cards {
+  margin: 1rem 0;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.point-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  height: auto;
+}
+.point-card p {
+  color: var(--color-lite);
+}
+.point-icon {
+  color: var(--color-dark);
+  font-size: 2rem;
+}
+
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1024px) {
+  .common-template {
+    padding: 2rem 2rem;
+  }
+  .template-section {
+    width: 92%;
+    flex-direction: column;
+  }
+  .second-section {
+    flex-direction: column-reverse;
+  }
+  .template-details {
+    width: 100%;
+  }
+
+  .template-image {
+    max-width: 30rem;
+    margin: auto;
+  }
+  .template-cards {
+    margin: 1rem 0;
+    width: 100%;
+  }
+
+  .point-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .template-section {
+    width: 95%;
+    flex-direction: column;
+  }
+  .second-section {
+    flex-direction: column-reverse;
+  }
+  .common-template {
+    padding: 0rem 1rem;
+  }
+  .template-image {
+    max-width: 20rem;
+    margin: auto;
+  }
+  .point-card {
+    gap: 0.5rem;
+  }
+  .point-icon {
+    font-size: 1.2rem;
+  }
+}

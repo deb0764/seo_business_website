@@ -1,0 +1,135 @@
+.footer__container {
+  display: flex;
+  flex-direction: column;
+}
+.footer__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5rem 0 2rem 0;
+  background: var(--color-bg-primary);
+}
+.footer__copyright {
+  text-align: center;
+  padding: 0 0 3rem 0;
+  background: var(--color-bg-primary);
+  font-weight: 500;
+  color: var(--color-lite);
+}
+.footer__logo {
+  display: flex;
+  justify-content: center;
+}
+.logo {
+  cursor: pointer;
+  width: 100%;
+  max-width: 12rem;
+  height: auto;
+}
+.footer__tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__tab li a {
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-lite);
+}
+.footer__tab li:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--color-orange);
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out;
+}
+.footer__tab li:hover:after {
+  transform: scaleX(1);
+  transition: 0.5s;
+}
+.footer__tab a:hover {
+  color: var(--color-orange);
+}
+.footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.footer__social-icon {
+  cursor: pointer;
+  color: var(--color-lite);
+  font-size: 1.5rem;
+}
+.footer__social li:after {
+  display: block;
+  content: "";
+  border: solid 1px var(--color-orange);
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+.footer__social-icon:hover {
+  color: var(--color-orange);
+}
+.footer__social li:hover:after {
+  transform: scaleX(1);
+  transition: 0.5s;
+}
+
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1360px) {
+  .footer__content {
+    padding: 3rem 0 2rem 0;
+  }
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+  .footer__tab {
+    margin-bottom: 2rem;
+  }
+  .footer__logo {
+    margin-bottom: 2rem;
+  }
+  .pricing {
+    height: auto;
+  }
+  .footer__social-icon {
+    font-size: 1.4rem;
+  }
+  .logo {
+    max-width: 10rem;
+  }
+  .footer__copyright {
+    padding: 0 0 2rem 0;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .footer__content {
+    padding: 2rem 0;
+  }
+  .footer__content {
+    grid-template-columns: 1fr;
+  }
+  .footer__tab {
+    flex-direction: column;
+    margin-bottom: 2rem;
+  }
+  .footer__logo {
+    margin-bottom: 2rem;
+  }
+  .footer__social-icon {
+    font-size: 1.2rem;
+  }
+  .footer__tab {
+    gap: 1.2rem;
+  }
+  .logo {
+    max-width: 7rem;
+  }
+}

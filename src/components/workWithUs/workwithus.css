@@ -1,0 +1,127 @@
+#workwithus {
+  background: var(--color-bg-secondary);
+  padding: 4rem 0 6rem 0rem;
+}
+#workwithus > p {
+  width: 40%;
+  font-weight: 400;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  color: var(--color-lite);
+  text-align: center;
+}
+#workwithus > h2 {
+  color: var(--color-dark);
+}
+.work-with-us__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.work-with-us__card {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background: var(--color-white);
+  align-items: center;
+  border-radius: 0.8rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.work-with-us__card:hover {
+  cursor: default;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+.work-with-us__card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.work-with-us__card-content h4 {
+  color: var(--color-dark);
+  font-weight: 500;
+}
+.work-with-us__card-content p {
+  color: var(--color-lite);
+}
+.work-with-us__card-icon {
+  background: var(--color-bg-primary);
+  color: var(--color-orange-lite);
+  font-size: 3rem;
+  border-radius: 50%;
+  padding: 0.5rem;
+  transition: 0.5s;
+}
+
+.work-with-us__card:hover .work-with-us__card-icon {
+  background: var(--color-orange-lite);
+  color: var(--color-white);
+}
+
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1024px) {
+  .work-with-us__card {
+    grid-auto-flow: row;
+    grid-template-columns: 1fr;
+  }
+  .work-with-us__content {
+    grid-template-columns: 1fr 1fr;
+  }
+  .work-with-us__card-content {
+    width: 90%;
+  }
+  .work-with-us__content {
+    width: 85%;
+  }
+  .work-with-us__card-icon {
+    margin: auto;
+    font-size: 2.8rem;
+  }
+  .work-with-us__card-content {
+    margin: auto;
+    text-align: center;
+  }
+  .work-with-us__card {
+    gap: 1rem;
+  }
+  #workwithus > p {
+    width: 70%;
+    margin-bottom: 2rem;
+  }
+  #workwithus {
+    padding: 2rem 0 3rem 0rem;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+@media screen and (max-width: 600px) {
+  .work-with-us__card-content {
+    width: 90%;
+  }
+  .work-with-us__content {
+    grid-template-columns: 1fr;
+    width: 90%;
+  }
+  .work-with-us__card-content p {
+    text-align: justify;
+  }
+  .work-with-us__card-icon {
+    font-size: 2.5rem;
+  }
+  #workwithus > p {
+    text-align: justify;
+    width: 80%;
+  }
+  #workwithus {
+    padding: 2rem 0 2rem 0rem;
+  }
+}

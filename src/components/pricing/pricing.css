@@ -1,0 +1,205 @@
+.pricing__section > h2 {
+  margin-bottom: 1rem;
+}
+.pricing__section > h3 {
+  text-align: center;
+  font-weight: normal;
+  margin-bottom: 3rem;
+  color: var(--color-lite);
+}
+.pricing__section {
+  padding: 4rem 0 6rem 0;
+}
+.pricing__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.pricing {
+  border-radius: 0.8rem;
+  transition: var(--transition);
+  height: 100%;
+  -webkit-box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.06);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.pricing:hover {
+  cursor: pointer;
+  -webkit-transform: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+.pricing__head {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-green) 100%
+  );
+  padding: 1.5rem;
+}
+
+.pricing__head h3 {
+  color: var(--color-white);
+  text-align: center;
+}
+.pricing-tabs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.pricing-tabs > li {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  font-weight: 500;
+  border-bottom: 1px solid var(--color-green);
+  border-left: 1px solid var(--color-green);
+  border-right: 1px solid var(--color-green);
+  color: var(--color-lite);
+  cursor: pointer;
+  width: 100%;
+}
+.pricing-tabs > li:first-child {
+  border-top: 1px solid var(--color-green);
+}
+.pricing-tabs > li:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-green) 100%
+  );
+  color: var(--color-white);
+}
+.pricing-tabs .active {
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-green) 100%
+  );
+  color: var(--color-white);
+}
+.pricing__body {
+  padding-top: 1rem;
+}
+
+.pricing__body p {
+  color: var(--color-lite);
+  font-weight: 500;
+  text-align: center;
+}
+.pricing__body span {
+  color: var(--color-orange-lite);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.pricing__bottom {
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-btn {
+  width: 60% !important;
+}
+
+.pricing__list {
+  padding: 1.5rem;
+  max-width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricing__list li {
+  display: flex;
+  align-items: justify;
+  gap: 0.5rem;
+  margin-bottom: 0.8rem;
+}
+
+.pricing__list-icon {
+  color: var(--color-lite);
+  margin-top: 2px;
+  width: 1rem;
+}
+
+.pricing__list p {
+  color: var(--color-lite);
+}
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1024px) {
+  .pricing__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .pricing__container ul {
+    grid-column: 1 / -1;
+  }
+  .pricing-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+  .pricing-tabs > li {
+    border-bottom: 1px solid var(--color-green);
+    border-left: 1px solid var(--color-green);
+    border-right: none;
+  }
+  .pricing-tabs > li:nth-child(even) {
+    border-right: 1px solid var(--color-green);
+  }
+  .pricing-tabs > li:nth-child(2) {
+    border-top: 1px solid var(--color-green);
+  }
+  .pricing__body span {
+    font-size: 1.8rem;
+  }
+  .pricing__section > h3 {
+    margin-bottom: 2rem;
+  }
+  .pricing__section {
+    padding: 2rem 0 3rem 0;
+  }
+  .pricing__bottom {
+    padding: 1rem;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .pricing__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .pricing-tabs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 2rem;
+  }
+  .pricing-tabs > li {
+    border-bottom: 1px solid var(--color-green);
+    border-left: 1px solid var(--color-green);
+    border-right: none;
+  }
+  .pricing-tabs > li:nth-child(even) {
+    border-right: 1px solid var(--color-green);
+  }
+  .pricing-tabs > li:nth-child(2) {
+    border-top: 1px solid var(--color-green);
+  }
+  .pricing__body span {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,108 @@
+.header {
+  margin: 0;
+  -webkit-box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+  box-shadow: 0 2px 28px 0 rgba(0, 0, 0, 0.06);
+}
+.header__container {
+  margin-top: 0;
+  padding: 1.5rem 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: var(--color-bg-primary);
+}
+.header__menu {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+}
+.header__menu li a {
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-lite);
+}
+.header__item:after {
+  display: block;
+  content: "";
+  border-bottom: solid 2px var(--color-orange);
+  transform: scaleX(0);
+  transition: transform 500ms ease-in-out;
+}
+.header__item:hover:after {
+  transform: scaleX(1);
+  transition: 0.5s;
+}
+.header__menu a:hover,
+.header__menu-mobile a:hover {
+  color: var(--color-orange);
+}
+.header__nav-btn {
+  display: none;
+  align-items: center;
+}
+.header__nav-icon {
+  color: var(--color-orange);
+  font-size: 2.2rem;
+  z-index: 3;
+}
+.header__menu-mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  background: #ffffffde;
+  backdrop-filter: blur(4px) saturate(70%);
+  text-align: center;
+  gap: 2rem;
+  left: -100%;
+  padding: 1.5rem 0;
+  -webkit-transition: left 0.8s ease-in-out;
+  transition: left 0.8s ease-in-out;
+}
+.header__menu-mobile li a {
+  color: var(--color-lite);
+  cursor: pointer;
+}
+
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 991px) {
+  .header__menu {
+    display: none;
+  }
+  .header__nav-btn {
+    display: flex;
+  }
+  .mobile-mode {
+    left: 0;
+    animation: slide-in 800ms;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .header__container {
+    padding: 1.5rem;
+  }
+  .mobile-mode {
+    left: 0;
+  }
+  .header__nav-icon {
+    font-size: 1.5rem;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}

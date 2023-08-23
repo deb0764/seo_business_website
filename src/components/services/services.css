@@ -1,0 +1,107 @@
+.services__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+#services {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-primary) 50%,
+    var(--color-bg-secondary) 50%
+  );
+  padding: 4rem 0;
+}
+
+.service {
+  background: var(--color-bg);
+  height: fit-content;
+  transition: var(--transition);
+  box-shadow: 0 0 1rem rgba(72, 69, 224, 0.1);
+  padding: 0.5rem 0;
+  height: auto;
+  cursor: pointer;
+  /* ------------------dev height */
+}
+
+.service:hover {
+  background: linear-gradient(
+    135deg,
+    var(--color-orange-deep) 0%,
+    var(--color-orange-lite) 100%
+  );
+  color: var(--color-white);
+  transform: translateY(-10px);
+  border-color: transparent;
+  transition: 0.5s;
+}
+
+.service__head {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  gap: 1rem;
+  /* ------------------dev height */
+}
+
+.service__head h4 {
+  font-weight: 500;
+  color: var(--color-dark);
+}
+
+.service__body {
+  padding: 0 1rem 1rem 1rem;
+  color: var(--color-lite);
+}
+
+.service__icon {
+  background: var(--color-bg-primary);
+  color: var(--color-orange-lite);
+  font-size: 3rem;
+  border-radius: 50%;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+  transition: 0.5s;
+}
+.service:hover .service__icon {
+  border: none;
+  background: var(--color-white);
+  color: var(--color-orange);
+}
+.service:hover .service__body {
+  color: var(--color-white);
+}
+.service:hover .service__head h4 {
+  color: var(--color-white);
+}
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+
+  .service {
+    height: auto;
+  }
+  .service__icon {
+    font-size: 2.8rem;
+  }
+  .service__head {
+    margin-bottom: 0rem;
+    /* ------------------dev height */
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .service__icon {
+    font-size: 2.5rem;
+  }
+}

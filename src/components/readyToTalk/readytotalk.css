@@ -1,0 +1,49 @@
+.ready-to-talk {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--color-blue) 0%,
+    var(--color-green) 100%
+  );
+  padding: 6rem 0;
+}
+.ready-to-talk > h4 {
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+  font-weight: normal;
+}
+.ready-to-talk > h2 {
+  margin-bottom: 1rem;
+  color: var(--color-white);
+  font-weight: normal;
+}
+.btn-ready-to-talk {
+  margin-top: 1rem;
+  text-align: center;
+  width: 11rem;
+}
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1024px) {
+  .ready-to-talk {
+    padding: 3rem 0;
+  }
+  .ready-to-talk > h4 {
+    margin-bottom: 1.2rem;
+  }
+  .ready-to-talk > h2 {
+    margin-bottom: 0.8rem;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .ready-to-talk > h4 {
+    width: 80%;
+    text-align: center;
+  }
+}

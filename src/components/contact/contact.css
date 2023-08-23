@@ -1,0 +1,197 @@
+#contact {
+  padding: 4rem 0 6rem 0;
+  background: var(--color-bg-secondary);
+}
+#contact h2 {
+  margin-bottom: 4rem;
+}
+
+.container.contact__container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.contact__options {
+  margin: 4rem auto auto auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.contact__option {
+  cursor: pointer;
+  width: 25%;
+  background: var(--color-white);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  text-align: start;
+  color: var(--color-lite);
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+.contact__option:hover {
+  border-color: var(--color-bg-primary);
+  transform: translateY(-10px);
+}
+
+.contact__option-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.contact__option:hover .contact__option-icon {
+  color: var(--color-orange-lite);
+}
+
+.contact__option a {
+  margin-top: 1rem;
+  display: inline-block;
+  color: var(--color-lite);
+}
+.contact__option h4 {
+  color: var(--color-lite);
+}
+.contact__option h5 {
+  font-weight: 400;
+  color: var(--color-lite);
+}
+.option__details {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.email-phone {
+  display: flex;
+  gap: 1rem;
+}
+input,
+textarea,
+select {
+  font-family: "Poppins", sans-serif;
+  width: 100%;
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary-variant);
+  resize: none;
+  color: var(--color-lite);
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+option {
+  color: var(--color-lite);
+}
+input::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+textarea::placeholder {
+  font-family: "Poppins", sans-serif;
+}
+::-webkit-input-placeholder {
+  /* Edge */
+  color: var(--color-lite);
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--color-lite);
+}
+.contact__avatar {
+  display: flex;
+  justify-content: center;
+}
+.contact__image {
+  max-width: 80%;
+  height: auto;
+}
+.contact__btn-group {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+.contact__error {
+  display: inline-block;
+  color: var(--color-orange-deep);
+}
+.hide {
+  display: none;
+}
+
+/********************************** Media Queries (Medium devices) ***************************/
+
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .contact__options {
+    width: 85%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .container.contact__container {
+    width: 85%;
+  }
+  .contact__option {
+    width: 100%;
+  }
+  .email-phone {
+    display: flex;
+    flex-direction: row;
+  }
+  .contact__option-icon {
+    font-size: 2rem;
+  }
+  .contact__avatar {
+    max-width: 40rem;
+    margin: auto;
+  }
+  #contact h2 {
+    margin-bottom: 2rem;
+  }
+  #contact {
+    padding: 3rem 0;
+  }
+}
+
+/********************************** Media Queries (Small devices) ***************************/
+
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: var(--container-width-sm);
+  }
+  .container.contact__container {
+    width: 90%;
+  }
+  .contact__options {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .contact__option-icon {
+    font-size: 1.5rem;
+  }
+  .email-phone {
+    display: flex;
+    flex-direction: column;
+  }
+  .contact__avatar {
+    max-width: 30rem;
+    margin: auto;
+  }
+  #contact {
+    padding: 2rem 0 3rem 0;
+  }
+}
