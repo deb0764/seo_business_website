@@ -13,7 +13,7 @@ This project is a multi-page business website built using React, with a primary 
 
 ## Installation
 
-1. Clone the repository: `https://github.com/deb0764/seo_friendly_single_page_website.git`
+1. Clone the repository: `https://github.com/debarghya-m/seo_friendly_single_page_website.git`
 2. Navigate to the project directory: `cd seo_friendly_single_page_website.git`
 3. Install dependencies: `npm install`
 4. Start the development server: `npm start`
